@@ -1,0 +1,8 @@
+{
+  "name": "Sistema de Gestión Código-58",
+  "description": "Plataforma integral de consultoría empresarial, formalización jurídica y aceleración comercial para emprendedores.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

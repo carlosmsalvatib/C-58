@@ -1,7 +1,0 @@
-.git
-.gitignore
-.env
-scratch/
-test_db.php
-setup.bat
-*.log

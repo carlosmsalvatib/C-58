@@ -28,24 +28,22 @@ Plataforma integral de consultoría empresarial, formalización jurídica y acel
 
 ---
 
-## ⚙️ Despliegue en Vercel (`codigo58.360siace.com`)
+## ⚙️ Arquitectura de Ejecución (Node.js + React + Vite)
 
-El proyecto está preparado para ejecutarse en la infraestructura serverless de Vercel a través de `api/index.php` y `vercel.json` con el runtime `vercel-php@0.9.0`.
+El proyecto ha sido migrado exitosamente a una arquitectura moderna basada en **React 18 + TypeScript + Vite** con **Tailwind CSS v4** y persistencia local (`localStorage`) que mantiene la fidelidad exacta de los modelos y datos de `database.sql`.
 
-### Variables de Entorno en Vercel
-En el panel de Vercel (**Project Settings &rarr; Environment Variables**), configure:
+### Scripts Disponibles
 
-| Variable | Descripción | Ejemplo |
-| :--- | :--- | :--- |
-| `DB_HOST` | Host del servidor MySQL en la nube | `aws.connect.psdb.cloud` / `tu-host.com` |
-| `DB_USER` | Usuario de la base de datos | `codigo58_user` |
-| `DB_PASS` | Contraseña de la base de datos | `tu_password_segura` |
-| `DB_NAME` | Nombre de la base de datos | `consultoria_mof` o `db_codigo58` |
-| `DB_PORT` | Puerto de conexión MySQL | `3306` |
+- `npm run dev`: Inicia el servidor de desarrollo en el puerto 3000.
+- `npm run build`: Compila la aplicación optimizada para producción en `dist/`.
+- `npm run lint`: Valida la sintaxis del proyecto con ESLint.
 
-### Base de Datos
-Importe el archivo `database.sql` en su servidor MySQL en la nube para crear todas las tablas y datos iniciales.
+### Roles y Credenciales de Demostración
 
-### Credenciales de Demostración
-- **Email:** `admin@consultoria.com`
-- **Contraseña:** `password`
+La plataforma incluye un selector rápido de perfiles en el encabezado y en la pantalla de acceso:
+
+- **Dirección Ejecutiva:** `admin@consultoria.com` (Control total, KPIs, CMS y permisos)
+- **Consultor Estratégico:** `consultor@consultoria.com` (Directorio, diagnósticos FDI, agenda de asesorías)
+- **Gestor Legal:** `legal@consultoria.com` (Expedientes SAPI, redacción constitutiva, validación documental)
+- **Comercial:** `comercial@consultoria.com` (Prospección, registro de contratos, cobros y abonos)
+- **Contraseña universal:** `password`
