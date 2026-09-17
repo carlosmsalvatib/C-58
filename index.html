@@ -2,6 +2,39 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      (function() {
+        try {
+          var origFetch = window.fetch;
+          var fetchHolder = origFetch ? origFetch.bind(window) : undefined;
+          Object.defineProperty(window, 'fetch', {
+            configurable: true,
+            enumerable: true,
+            get: function() {
+              return fetchHolder || origFetch;
+            },
+            set: function(fn) {
+              fetchHolder = fn;
+            }
+          });
+        } catch (err) {
+          try {
+            var protoFetch = Window.prototype.fetch;
+            var protoFetchHolder = protoFetch ? protoFetch.bind(window) : undefined;
+            Object.defineProperty(Window.prototype, 'fetch', {
+              configurable: true,
+              enumerable: true,
+              get: function() {
+                return protoFetchHolder || protoFetch;
+              },
+              set: function(fn) {
+                protoFetchHolder = fn;
+              }
+            });
+          } catch (err2) {}
+        }
+      })();
+    </script>
     <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sistema de Gestión Código-58</title>
