@@ -38,8 +38,13 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Brand */}
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-teal-500 to-[#161938] flex items-center justify-center font-bold text-lg text-white shadow-sm border border-teal-400/30">
-            C58
+          <div className="h-11 w-11 rounded-xl bg-white p-1 flex items-center justify-center shadow-sm border border-slate-700/40 flex-shrink-0">
+            <img
+              src="/logo.png"
+              alt="Logo Código 58"
+              className="w-full h-full object-contain"
+              referrerPolicy="no-referrer"
+            />
           </div>
           <div>
             <h1 className="text-base sm:text-lg font-bold tracking-tight text-white flex items-center gap-2">

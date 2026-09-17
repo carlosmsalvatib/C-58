@@ -27,9 +27,14 @@ export const LoginView: React.FC = () => {
     <div id="login-view" className="min-h-screen bg-gradient-to-br from-[#161938] via-[#1E224F] to-[#0A0D24] flex items-center justify-center p-4">
       <div className="max-w-md w-full bg-white rounded-2xl shadow-2xl p-6 sm:p-8 space-y-6 relative overflow-hidden border border-slate-100">
         {/* Brand header */}
-        <div className="text-center space-y-2">
-          <div className="w-14 h-14 mx-auto rounded-xl bg-gradient-to-br from-teal-500 to-[#161938] flex items-center justify-center font-bold text-2xl text-white shadow-md border border-teal-400/30">
-            C58
+        <div className="text-center space-y-3">
+          <div className="w-20 h-20 mx-auto flex items-center justify-center">
+            <img
+              src="/logo.png"
+              alt="Código 58"
+              className="w-full h-full object-contain"
+              referrerPolicy="no-referrer"
+            />
           </div>
           <h2 className="text-2xl font-bold text-slate-900 tracking-tight">
             {config.sistema_titulo}
